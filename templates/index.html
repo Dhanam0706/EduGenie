@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduGenie - Learning Assistant</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>EduGenie</h1>
+    <p class="subtitle">Google Gemini Powered Learning Assistant</p>
+
+    <form id="edugenie-form">
+      <label for="task">What would you like to do?</label>
+      <select id="task" name="task">
+        <option value="explain">Explain a concept</option>
+        <option value="qa">Ask a question</option>
+        <option value="quiz">Generate a quiz</option>
+        <option value="summarize">Summarize text</option>
+        <option value="recommend">Recommend a learning path</option>
+      </select>
+
+      <label for="user-input">Your topic, question or study material</label>
+      <textarea id="user-input" name="user-input" rows="7"
+        placeholder="Example: Explain binary search with an example."></textarea>
+
+      <div id="followup-row" class="followup" hidden>
+        <input type="checkbox" id="followup">
+        <label for="followup">This is a follow-up to the previous answer</label>
+      </div>
+
+      <button type="submit" id="submit-btn">Submit</button>
+    </form>
+
+    <section id="status" class="status" aria-live="polite"></section>
+    <section id="result" class="result" hidden></section>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

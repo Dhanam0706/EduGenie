@@ -1,0 +1,10 @@
+virtual users      : 10
+duration (s)       : 20.0
+requests           : 24025
+throughput (req/s) : 1200.2
+avg response (s)   : 0.008
+p95 response (s)   : 0.011
+max response (s)   : 0.034
+error rate (%)     : 0.00
+server CPU avg/max : 43% / 45% (of one core)
+server RSS avg/max : 67 MB / 67 MB

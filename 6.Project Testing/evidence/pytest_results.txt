@@ -1,0 +1,48 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.1.1, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /home/claude/EduGenie_SWTID
+configfile: pytest.ini
+plugins: anyio-4.15.1
+collecting ... collected 32 items
+
+tests/test_app.py::test_home_page_has_form_and_hides_key PASSED          [  3%]
+tests/test_app.py::test_static_files_are_served PASSED                   [  6%]
+tests/test_app.py::test_health PASSED                                    [  9%]
+tests/test_app.py::test_frontend_to_backend_round_trip PASSED            [ 12%]
+tests/test_app.py::test_valid_question PASSED                            [ 15%]
+tests/test_app.py::test_follow_up_question_sends_context PASSED          [ 18%]
+tests/test_app.py::test_text_endpoints_return_result[/explain] PASSED    [ 21%]
+tests/test_app.py::test_text_endpoints_return_result[/learn/recommendations] PASSED [ 25%]
+tests/test_app.py::test_text_endpoints_return_result[/summarize] PASSED  [ 28%]
+tests/test_app.py::test_summary_request PASSED                           [ 31%]
+tests/test_app.py::test_empty_input_is_rejected[/qa] PASSED              [ 34%]
+tests/test_app.py::test_empty_input_is_rejected[/explain] PASSED         [ 37%]
+tests/test_app.py::test_empty_input_is_rejected[/quiz] PASSED            [ 40%]
+tests/test_app.py::test_empty_input_is_rejected[/summarize] PASSED       [ 43%]
+tests/test_app.py::test_empty_input_is_rejected[/learn/recommendations] PASSED [ 46%]
+tests/test_app.py::test_invalid_request_is_rejected PASSED               [ 50%]
+tests/test_app.py::test_too_long_input_is_rejected PASSED                [ 53%]
+tests/test_app.py::test_quiz_generation PASSED                           [ 56%]
+tests/test_app.py::test_quiz_handles_markdown_fences PASSED              [ 59%]
+tests/test_app.py::test_quiz_answer_can_be_option_text PASSED            [ 62%]
+tests/test_app.py::test_quiz_with_unexpected_response[Sorry, I cannot make a quiz.] PASSED [ 65%]
+tests/test_app.py::test_quiz_with_unexpected_response[[]] PASSED         [ 68%]
+tests/test_app.py::test_quiz_with_unexpected_response[[{"question": "Q?", "options": ["a", "b"], "answer": "A"}]] PASSED [ 71%]
+tests/test_app.py::test_quiz_with_unexpected_response[[{"question": "Q?", "options": ["a", "b", "c", "d"], "answer": "Z"}]] PASSED [ 75%]
+tests/test_app.py::test_missing_api_key PASSED                           [ 78%]
+tests/test_app.py::test_gemini_api_failure_hides_details PASSED          [ 81%]
+tests/test_app.py::test_empty_gemini_response PASSED                     [ 84%]
+tests/test_app.py::test_rejected_api_key_stops_the_chain PASSED          [ 87%]
+tests/test_app.py::test_model_chain_falls_through_to_next_model PASSED   [ 90%]
+tests/test_app.py::test_all_models_rate_limited PASSED                   [ 93%]
+tests/test_app.py::test_model_chain_has_no_duplicates PASSED             [ 96%]
+tests/test_app.py::test_unexpected_error_is_hidden PASSED                [100%]
+
+=============================== warnings summary ===============================
+../../../usr/local/lib/python3.12/dist-packages/fastapi/testclient.py:1
+  /usr/local/lib/python3.12/dist-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 32 passed, 1 warning in 0.11s =========================

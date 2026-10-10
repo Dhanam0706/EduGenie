@@ -1,0 +1,18 @@
+# Secrets
+.env
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+.pytest_cache/
+
+# Generated while building documentation
+docs-src/_tmp.html
+docs-src/assets/_outfit.png
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
